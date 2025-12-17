@@ -9,24 +9,25 @@ class Parser {
 
   async readFile() {
     try {
-      const rawData = await fs.promises.readFile(this.filePath, 'utf8');
-      this.data = rawData;
+      const content = await fs.promises.readFile(this.filePath, 'utf8');
+      this.data = JSON.parse(content);
     } catch (error) {
-      throw new Error(`Failed to read file: ${error.message}`);
+      console.error(`Error reading file: ${error}`);
     }
   }
 
-  parseData() {
+  async parseData() {
     if (!this.data) {
-      throw new Error('No data to parse');
+      await this.readFile();
     }
-    const jsonData = JSON.parse(this.data);
-    return jsonData;
+    return this.data;
   }
 
-  async parseFile() {
-    await this.readFile();
-    return this.parseData();
+  validateData(data) {
+    if (!data || typeof data !== 'object') {
+      throw new Error('Invalid data');
+    }
+    return data;
   }
 }
 
