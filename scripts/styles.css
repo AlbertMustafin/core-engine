@@ -1,0 +1,62 @@
+/* core-engine styles */
+
+.core-engine-app {
+  background-color: #f0f0f0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.core-engine-app header {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.core-engine-app header h1 {
+  margin: 0;
+}
+
+.core-engine-app nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.core-engine-app nav li {
+  margin-right: 20px;
+}
+
+.core-engine-app nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+.core-engine-app nav a:hover {
+  color: #555;
+}
+
+.core-engine-app main {
+  display: block;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.core-engine-app footer {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  clear: both;
+}
+
+.core-engine-app footer p {
+  margin: 0;
+}
