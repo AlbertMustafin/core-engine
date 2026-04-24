@@ -1,0 +1,31 @@
+{
+  "serviceName": "core-engine",
+  "status": "UP",
+  "timestamp": "2024-01-27T12:34:56.789Z",
+  "version": "1.2.3",
+  "dependencies": {
+    "database": {
+      "status": "UP",
+      "responseTimeMs": 15
+    },
+    "messageQueue": {
+      "status": "UP",
+      "messagesPending": 0
+    },
+    "externalAPI": {
+      "status": "UP",
+      "availability": 0.999
+    }
+  },
+  "metrics": {
+    "cpuUsage": 0.25,
+    "memoryUsageBytes": 1234567890,
+    "activeThreads": 10,
+    "requestsPerSecond": 123.45
+  },
+  "metadata": {
+    "environment": "production",
+    "region": "us-east-1",
+    "instanceId": "i-0abcdef1234567890"
+  }
+}
